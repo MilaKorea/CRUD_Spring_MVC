@@ -33,7 +33,7 @@ public class UsersController {
     }
 
 
-    @GetMapping("/save")
+    @PostMapping("/save")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
         return "redirect:/users";
